@@ -1,0 +1,145 @@
+{
+  "easy": {
+    "abs": [
+      "plank hold",
+      "lateral plank hold",
+      "crunches",
+      "sit-ups",
+      "glute bridges",
+      "russian twist",
+      "leg raisers",
+      "chops"
+    ],
+    "shoulder": [
+      "lateral shoot throughs",
+      "push-ups",
+      "inchworm",
+      "bird - dog",
+      "plank jacks",
+      "cross mountain climbers",
+      "pseudo push-up"
+    ],
+    "legs": [
+      "squat pulse",
+      "ice skaters",
+      "frog squats",
+      "frog jumps",
+      "plyo lunge (jump)",
+      "prisoner squat",
+      "A jumps",
+      "step-ups",
+      "speed squats"
+    ],
+    "cardio": [
+      "high-knees",
+      "moutain climbers",
+      "burpees",
+      "seal jacks",
+      "star jumps",
+      "jump squats"
+    ]
+  },
+  "medium": {
+    "abs": [
+      "moving plank",
+      "jack-knives",
+      "feet up twist crunches",
+      "butterfly sit ups",
+      "bicycle crunches",
+      "frog glute bridges",
+      "jack-knives",
+      "5 jack knives + 5 crunches",
+      "frozen V situp",
+      "leg tuck-ins",
+      "super man complex",
+      "flutter kicks",
+      "scissors",
+      "russian v tucks",
+      "plank raise hand"
+    ],
+    "shoulder": [
+      "bear crawl ",
+      "push-up jacks",
+      "crab reach",
+      "push-ups + shoulder touch",
+      "push-ups + thigh taps",
+      "plank leg raisers",
+      "tricep dips",
+      "dumbell press",
+      "beast hold arm raise"
+    ],
+    "legs": [
+      "quadrockers",
+      "sprawls",
+      "squat jump with rotation",
+      "45 degree lunges",
+      "squat lunge",
+      "forward + reverse lunge",
+      "squat mid-point alternate lunges",
+      "foot fires",
+      "lunge to squat",
+      "cossack squat",
+      "elevated lunges",
+      "single-leg glute brdiges"
+    ],
+    "cardio": [
+      "tuck jumps",
+      "high plank - tuck jumps",
+      "forward jumps",
+      "lateral tuck jumps",
+      "1o mountain climbers + 2 hip thrusters",
+      "Wide mountain climbers",
+      "toe taps"
+    ]
+  },
+  "hard": {
+    "abs": [
+      "body saws",
+      "lateral plank push throughs",
+      "plank feet twists",
+      "sit-ups + reverse bridge",
+      "body saws",
+      "10 russian twists + 2 jack knives",
+      "side plank pulse",
+      "sit-up elbow touch",
+      "hollow rocks"
+    ],
+    "shoulder": [
+      "gorilla hops",
+      "downward dog knee touches ",
+      "push-up jack",
+      "push-up + clap",
+      "push-up low pulse",
+      "single leg high knees",
+      "low push up side to side elbow touch",
+      "one arm plank jumps",
+      "pike push-ups",
+      "hindu push-up",
+      "Diamond push-ups",
+      "stacked push-ups"
+    ],
+
+    "legs": [
+      "mountain climbers jump",
+      "mountain climbers lateral jumps",
+      "plyo lunges 180 degree",
+      "1 jump squat + 1 burpee pyramid",
+      "lunge reach",
+      "10 lunge high reach + 10 tuck jumps",
+      "3 frog squats + 4 plyo lunge",
+      "frog + close leg and wide leg squats",
+      "pistol squats"
+    ],
+    "cardio": [
+      "single leg burpee",
+      "2 tuck jumps into squat pulse",
+      "10 mountain climbers + 3 push ups",
+      "5 squat + 5 heel clickers",
+      "10 mountain climbers + 10 bicycle crunches",
+      "5 sprawls + 2 burpees",
+      "10 high-knees + 5 burpees",
+      "bear crawl  + 2 squat jumps",
+      "gorilla burpees"
+    ]
+  }
+}

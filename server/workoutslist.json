@@ -1,0 +1,656 @@
+[
+  {
+    "name": "plank hold",
+    "description": "",
+    "difficulty": "easy",
+    "type": "abs"
+  },
+  {
+    "name": "lateral plank hold",
+    "description": "",
+    "difficulty": "easy",
+    "type": "abs"
+  },
+  {
+    "name": "crunches",
+    "description": "",
+    "difficulty": "easy",
+    "type": "abs"
+  },
+  {
+    "name": "sit-ups",
+    "description": "",
+    "difficulty": "easy",
+    "type": "abs"
+  },
+  {
+    "name": "glute bridges",
+    "description": "",
+    "difficulty": "easy",
+    "type": "abs"
+  },
+  {
+    "name": "russian twist",
+    "description": "",
+    "difficulty": "easy",
+    "type": "abs"
+  },
+  {
+    "name": "leg raisers",
+    "description": "",
+    "difficulty": "easy",
+    "type": "abs"
+  },
+  {
+    "name": "wood choppers",
+    "description": "",
+    "difficulty": "easy",
+    "type": "abs"
+  },
+  {
+    "name": "lateral shoot throughs",
+    "description": "",
+    "difficulty": "easy",
+    "type": "shoulder"
+  },
+  {
+    "name": "push ups",
+    "description": "",
+    "difficulty": "easy",
+    "type": "shoulder"
+  },
+  {
+    "name": "inch worms",
+    "description": "",
+    "difficulty": "easy",
+    "type": "shoulder"
+  },
+  {
+    "name": "bird dog",
+    "description": "",
+    "difficulty": "easy",
+    "type": "shoulder"
+  },
+  {
+    "name": "plank jacks",
+    "description": "",
+    "difficulty": "easy",
+    "type": "shoulder"
+  },
+  {
+    "name": "cross mountain climbers",
+    "description": "",
+    "difficulty": "easy",
+    "type": "shoulder"
+  },
+  {
+    "name": "pseudo push ups",
+    "description": "",
+    "difficulty": "easy",
+    "type": "shoulder"
+  },
+  {
+    "name": "squat pulse",
+    "description": "",
+    "difficulty": "easy",
+    "type": "legs"
+  },
+  {
+    "name": "ice skaters",
+    "description": "",
+    "difficulty": "easy",
+    "type": "legs"
+  },
+  {
+    "name": "frog squats",
+    "description": "",
+    "difficulty": "easy",
+    "type": "legs"
+  },
+  {
+    "name": "frog jumps",
+    "description": "",
+    "difficulty": "easy",
+    "type": "legs"
+  },
+  {
+    "name": "plyo-lunge jump",
+    "description": "",
+    "difficulty": "easy",
+    "type": "legs"
+  },
+  {
+    "name": "prisoner squats",
+    "description": "",
+    "difficulty": "easy",
+    "type": "legs"
+  },
+  {
+    "name": "A Jumps",
+    "description": "",
+    "difficulty": "easy",
+    "type": "legs"
+  },
+  {
+    "name": "step-ups",
+    "description": "",
+    "difficulty": "easy",
+    "type": "legs"
+  },
+  {
+    "name": "speed squats",
+    "description": "",
+    "difficulty": "easy",
+    "type": "legs"
+  },
+  {
+    "name": "high knees",
+    "description": "",
+    "difficulty": "easy",
+    "type": "cardio"
+  },
+  {
+    "name": "mountain climbers",
+    "description": "",
+    "difficulty": "easy",
+    "type": "cardio"
+  },
+  {
+    "name": "burpees",
+    "description": "",
+    "difficulty": "easy",
+    "type": "cardio"
+  },
+  {
+    "name": "seal jacks",
+    "description": "",
+    "difficulty": "easy",
+    "type": "cardio"
+  },
+  {
+    "name": "star jumps",
+    "description": "",
+    "difficulty": "easy",
+    "type": "cardio"
+  },
+  {
+    "name": "jump squats",
+    "description": "",
+    "difficulty": "easy",
+    "type": "cardio"
+  },
+  {
+    "name": "moving planks",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "feet up crunches",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "butterfly situps",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "bicycle crunches",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "frog glute bridges",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "jack knives",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "5 jack knives and 5 crunches",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "frozen V situps",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "leg tuck-ins",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "superman complex",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "flutter knicks",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "scissors",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "russian V tucks",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "plank raise hand",
+    "description": "",
+    "difficulty": "medium",
+    "type": "abs"
+  },
+  {
+    "name": "bear crawls",
+    "description": "",
+    "difficulty": "medium",
+    "type": "shoulder"
+  },
+  {
+    "name": "push up jacks",
+    "description": "",
+    "difficulty": "medium",
+    "type": "shoulder"
+  },
+  {
+    "name": "crab reach",
+    "description": "",
+    "difficulty": "medium",
+    "type": "shoulder"
+  },
+  {
+    "name": "pushup + thigh taps",
+    "description": "",
+    "difficulty": "medium",
+    "type": "shoulder"
+  },
+  {
+    "name": "plank leg raisers",
+    "description": "",
+    "difficulty": "medium",
+    "type": "shoulder"
+  },
+  {
+    "name": "tricep dips",
+    "description": "",
+    "difficulty": "medium",
+    "type": "shoulder"
+  },
+  {
+    "name": "dumbell press",
+    "description": "",
+    "difficulty": "medium",
+    "type": "shoulder"
+  },
+  {
+    "name": "beast hold arm raise",
+    "description": "",
+    "difficulty": "medium",
+    "type": "shoulder"
+  },
+  {
+    "name": "quadrockers",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "sprawls",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "squat jump with rotation",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "45 degree lunge",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "squat lunge",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "forward + reverse lunges",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "squad mid point alternate lunges",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "foot fires",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "lunge to squat",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "cossack squats",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "elevated lunges",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "single leg glute bridges",
+    "description": "",
+    "difficulty": "medium",
+    "type": "legs"
+  },
+  {
+    "name": "tuck jumps",
+    "description": "",
+    "difficulty": "medium",
+    "type": "cardio"
+  },
+  {
+    "name": "high plank tuck jumps",
+    "description": "",
+    "difficulty": "medium",
+    "type": "cardio"
+  },
+  {
+    "name": "forward jumps",
+    "description": "",
+    "difficulty": "medium",
+    "type": "cardio"
+  },
+  {
+    "name": "lateral tuck jumps",
+    "description": "",
+    "difficulty": "medium",
+    "type": "cardio"
+  },
+  {
+    "name": "10 mountain climbers + 2 hip thrusters",
+    "description": "",
+    "difficulty": "medium",
+    "type": "cardio"
+  },
+  {
+    "name": "wide mountain climbers",
+    "description": "",
+    "difficulty": "medium",
+    "type": "cardio"
+  },
+  {
+    "name": "toe taps",
+    "description": "",
+    "difficulty": "medium",
+    "type": "cardio"
+  },
+  {
+    "name": "body saws",
+    "description": "",
+    "difficulty": "hard",
+    "type": "abs"
+  },
+  {
+    "name": "lateral plank push throughs",
+    "description": "",
+    "difficulty": "hard",
+    "type": "abs"
+  },
+  {
+    "name": "plank feet twists",
+    "description": "",
+    "difficulty": "hard",
+    "type": "abs"
+  },
+  {
+    "name": "situps + reverse bridges",
+    "description": "",
+    "difficulty": "hard",
+    "type": "abs"
+  },
+  {
+    "name": "body saws",
+    "description": "",
+    "difficulty": "hard",
+    "type": "abs"
+  },
+  {
+    "name": "10 russian twists + 2 jack knives",
+    "description": "",
+    "difficulty": "hard",
+    "type": "abs"
+  },
+  {
+    "name": "side plank pulse",
+    "description": "",
+    "difficulty": "hard",
+    "type": "abs"
+  },
+  {
+    "name": "situp elbow touch",
+    "description": "",
+    "difficulty": "hard",
+    "type": "abs"
+  },
+  {
+    "name": "hollow rocks",
+    "description": "",
+    "difficulty": "hard",
+    "type": "abs"
+  },
+  {
+    "name": "gorilla hops",
+    "description": "",
+    "difficulty": "hard",
+    "type": "shoulder"
+  },
+  {
+    "name": "downward dog knee touches",
+    "description": "",
+    "difficulty": "hard",
+    "type": "shoulder"
+  },
+  {
+    "name": "push-up jack",
+    "description": "",
+    "difficulty": "hard",
+    "type": "shoulder"
+  },
+  {
+    "name": "push-up + clap",
+    "description": "",
+    "difficulty": "hard",
+    "type": "shoulder"
+  },
+  {
+    "name": "push-up low pulse",
+    "description": "",
+    "difficulty": "hard",
+    "type": "shoulder"
+  },
+  {
+    "name": "single leg high knees",
+    "description": "",
+    "difficulty": "hard",
+    "type": "shoulder"
+  },
+  {
+    "name": "low push up side to side elbow touch",
+    "description": "",
+    "difficulty": "hard",
+    "type": "shoulder"
+  },
+  {
+    "name": "one arm plank jumps",
+    "description": "",
+    "difficulty": "hard",
+    "type": "shoulder"
+  },
+  {
+    "name": "pike push ups",
+    "description": "",
+    "difficulty": "hard",
+    "type": "shoulder"
+  },
+  {
+    "name": "diamond push ups",
+    "description": "",
+    "difficulty": "hard",
+    "type": "shoulder"
+  },
+  {
+    "name": "stacked pushups",
+    "description": "",
+    "difficulty": "hard",
+    "type": "shoulder"
+  },
+  {
+    "name": "mountain climbers jump",
+    "description": "",
+    "difficulty": "hard",
+    "type": "legs"
+  },
+  {
+    "name": "mountain climbers lateral jumps",
+    "description": "",
+    "difficulty": "hard",
+    "type": "legs"
+  },
+  {
+    "name": "plyo lunges 180 degree",
+    "description": "",
+    "difficulty": "hard",
+    "type": "legs"
+  },
+  {
+    "name": "1 jump squat + 1 burpee pyramid",
+    "description": "",
+    "difficulty": "hard",
+    "type": "legs"
+  },
+  {
+    "name": "lunge reach",
+    "description": "",
+    "difficulty": "hard",
+    "type": "legs"
+  },
+  {
+    "name": "10 lunge high reach + 10 tuck jumps",
+    "description": "",
+    "difficulty": "hard",
+    "type": "legs"
+  },
+  {
+    "name": "3 frog squats + 4 plyo lunge",
+    "description": "",
+    "difficulty": "hard",
+    "type": "legs"
+  },
+  {
+    "name": "frog + close leg and wide leg squats",
+    "description": "",
+    "difficulty": "hard",
+    "type": "legs"
+  },
+  {
+    "name": "pistol squats",
+    "description": "",
+    "difficulty": "hard",
+    "type": "legs"
+  },
+  {
+    "name": "single leg burpee",
+    "description": "",
+    "difficulty": "hard",
+    "type": "cardio"
+  },
+  {
+    "name": "2 tuck jumps into squat pulse",
+    "description": "",
+    "difficulty": "hard",
+    "type": "cardio"
+  },
+  {
+    "name": "10 mountain climbers + 3 push ups",
+    "description": "",
+    "difficulty": "hard",
+    "type": "cardio"
+  },
+  {
+    "name": "5 squat + 5 heel clickers",
+    "description": "",
+    "difficulty": "hard",
+    "type": "cardio"
+  },
+  {
+    "name": "10 mountain climbers + 10 bicycle crunches",
+    "description": "",
+    "difficulty": "hard",
+    "type": "cardio"
+  },
+  {
+    "name": "5 sprawls + 2 burpees",
+    "description": "",
+    "difficulty": "hard",
+    "type": "cardio"
+  },
+  {
+    "name": "10 high-knees + 5 burpees",
+    "description": "",
+    "difficulty": "hard",
+    "type": "cardio"
+  },
+  {
+    "name": "bear crawl  + 2 squat jumps",
+    "description": "",
+    "difficulty": "hard",
+    "type": "cardio"
+  },
+  {
+    "name": "gorilla burpees",
+    "description": "",
+    "difficulty": "hard",
+    "type": "cardio"
+  }
+]
