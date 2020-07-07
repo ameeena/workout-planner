@@ -21,7 +21,14 @@ const ScheduleDetails = () => {
             <div>Date : {scheduleDetails.date}</div>
             <label>List of workouts : </label>
             <div>{scheduleBasedWorkoutsList}</div>
-            <button onClick={() => history.push("/workoutlog", { workoutDetails: scheduleDetails.workoutList })}> Add Log</button>
+            <button onClick={() => history.push("/workoutlog", {
+                LogReq: {
+                    workoutList: scheduleDetails.workoutList,
+                    date: scheduleDetails.date,
+                    scheduleId: scheduleDetails._id
+
+                }
+            })}> Add Log</button>
         </div>
     );
 }

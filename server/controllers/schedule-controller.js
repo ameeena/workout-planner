@@ -27,7 +27,7 @@ exports.getScheduleById = async (req, res) => {
         let schedule = await workoutDb.collection(scheduleCollection).findOne({ _id: ObjectId(schedulerId) });
         let listOfIds = schedule.workoutList.map(elem => ObjectId(elem));
         let workoutList = await workoutDb.collection(workoutCollection).find({ _id: { $in: listOfIds } }).toArray();
-        let result = Object.assign({}, { name: schedule.name, date: schedule.date, workoutList: workoutList });
+        let result = Object.assign({}, { name: schedule.name, date: schedule.date, workoutList: workoutList, _id: schedule._id });
         res.status(200).json(result);
 
     } catch (error) {

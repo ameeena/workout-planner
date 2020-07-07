@@ -8,7 +8,9 @@ import { useRouteMatch, Switch, Route, useHistory } from "react-router-dom";
 import ScheduleList from "./ScheduleList";
 import ScheduleDetails from "./ScheduleDetails";
 
-const WorkoutSchedules = ({ schedules, getSchedules, getScheduleById, scheduleDetails }) => {
+//TODO : First load of schedule details is empty .. need to figure out something
+
+const WorkoutSchedules = ({ schedules, getSchedules, getScheduleById, scheduleDetailsById }) => {
 
     const history = useHistory();
     useEffect(() => {
@@ -20,10 +22,11 @@ const WorkoutSchedules = ({ schedules, getSchedules, getScheduleById, scheduleDe
     let switchElem = (
         <Switch>
             <Route exact path={path}>
-                {schedules.length > 0 && <ScheduleList handleClick={(scheduleId) => {
-                    getScheduleById(scheduleId);
-                    history.push(`${url}/${scheduleId}`, { scheduleDetails: scheduleDetails })
-                }} schedules={schedules} />}
+                {schedules.length > 0 &&
+                    <ScheduleList handleClick={(scheduleId) => {
+                        getScheduleById(scheduleId);
+                        history.push(`${url}/${scheduleId}`, { scheduleDetails: scheduleDetailsById })
+                    }} schedules={schedules} />}
             </Route>
             <Route path={`${path}/:scheduleId`}>
                 <ScheduleDetails />
@@ -41,7 +44,7 @@ const WorkoutSchedules = ({ schedules, getSchedules, getScheduleById, scheduleDe
 function mapStateToProps(state) {
     return {
         schedules: state.schedules,
-        scheduleDetails: state.scheduleDetails,
+        scheduleDetailsById: state.scheduleDetails,
     };
 }
 
