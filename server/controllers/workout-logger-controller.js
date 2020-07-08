@@ -32,19 +32,37 @@ exports.addWorkoutLogs = async (req, res) => {
 }
 
 // get all the workouts -  maybe based on schedule id
-exports.getWorkoutLogs = async (req, res) => {
+exports.getWorkoutLogsById = async (req, res) => {
     try {
         let scheduleId = req.params.scheduleId;
         let result = await workoutDb.collection(workoutLoggerCollection).find({ scheduleId: scheduleId }).toArray();
         let workoutIds = result.map((elem) => ObjectID(elem.workoutId));
         let workoutNames = await workoutDb.collection(workoutCollection).find({ _id: { $in: workoutIds } }).toArray();
-        console.log(workoutNames);
         for (const eachWorkout of result) {
             eachWorkout["workoutName"] = workoutNames.find(elem => elem._id == eachWorkout.workoutId).name;
         }
-        console.log(result);
         return res.status(200).json(result);
     } catch (error) {
         return res.status(500).json(error);
     }
 }
+
+exports.getWorkoutLogs = async (req, res) => {
+    try {
+        // get A list of all workouts and group by workout Id and send
+        let result = await workoutDb.collection(workoutLoggerCollection).aggregate([{ $group: { _id: "$workoutId", data: { $push: { date: "$date", reps: "$reps" } } } }]).toArray();
+        let workoutIds = result.map((elem) => ObjectID(elem._id));
+        let workoutNames = await workoutDb.collection(workoutCollection).find({ _id: { $in: workoutIds } }).toArray();
+        console.log(workoutNames);
+
+        for (const eachWorkout of result) {
+            eachWorkout["workoutName"] = workoutNames.find(elem => elem._id == eachWorkout._id).name;
+        }
+
+        res.status(200).json(result);
+
+    } catch (error) {
+        res.status(500).json(error);
+    }
+}
+

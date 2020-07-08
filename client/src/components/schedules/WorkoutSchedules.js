@@ -13,7 +13,7 @@ const WorkoutSchedules = ({ schedules, getSchedules, getScheduleById, scheduleDe
     const history = useHistory();
     useEffect(() => {
         getSchedules();
-    });
+    }, []);
 
     const handleClick = (scheduleId) => {
         getScheduleById(scheduleId);
