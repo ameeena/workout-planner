@@ -20,7 +20,6 @@ exports.addWorkoutLogs = async (req, res) => {
                 scheduleId: loggerDetails.scheduleId,
                 workoutId: workoutId
             }
-            console.log(eachWorkoutLog);
             await workoutDb.collection(workoutLoggerCollection).insertOne(eachWorkoutLog);
         }
         return res.status(200).json(true);
@@ -53,8 +52,6 @@ exports.getWorkoutLogs = async (req, res) => {
         let result = await workoutDb.collection(workoutLoggerCollection).aggregate([{ $group: { _id: "$workoutId", data: { $push: { date: "$date", reps: "$reps" } } } }]).toArray();
         let workoutIds = result.map((elem) => ObjectID(elem._id));
         let workoutNames = await workoutDb.collection(workoutCollection).find({ _id: { $in: workoutIds } }).toArray();
-        console.log(workoutNames);
-
         for (const eachWorkout of result) {
             eachWorkout["workoutName"] = workoutNames.find(elem => elem._id == eachWorkout._id).name;
         }
