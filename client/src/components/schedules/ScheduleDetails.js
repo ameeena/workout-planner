@@ -3,16 +3,22 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 
-const ScheduleDetails = () => {
+const ScheduleDetails = ({ scheduleDetails }) => {
 
     const history = useHistory();
-    const scheduleDetails = history.location.state.scheduleDetails;
 
-    let scheduleBasedWorkoutsList = <div></div>
-    if (scheduleDetails.workoutList != undefined) {
-        scheduleBasedWorkoutsList = scheduleDetails.workoutList.map((elem) => (
-            <li key={elem._id}>{elem.name}</li>
-        ))
+    const scheduleBasedWorkoutsList = scheduleDetails.workoutList.map((elem) => (
+        <li key={elem._id}>{elem.name}</li>
+    ))
+
+    const handleClick = () => {
+        history.push("/workoutlog", {
+            LogReq: {
+                workoutList: scheduleDetails.workoutList,
+                date: scheduleDetails.date,
+                scheduleId: scheduleDetails._id
+            }
+        })
     }
 
     return (
@@ -21,16 +27,8 @@ const ScheduleDetails = () => {
             <div>Date : {scheduleDetails.date}</div>
             <label>List of workouts : </label>
             <div>{scheduleBasedWorkoutsList}</div>
-            <button onClick={() => history.push("/workoutlog", {
-                LogReq: {
-                    workoutList: scheduleDetails.workoutList,
-                    date: scheduleDetails.date,
-                    scheduleId: scheduleDetails._id
-
-                }
-            })}> Add Log</button>
+            <button onClick={handleClick}> Add Log</button>
         </div>
     );
 }
-
 export default ScheduleDetails;

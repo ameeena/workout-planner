@@ -5,6 +5,7 @@ const ScheduleList = ({ schedules, handleClick }) => {
 
     const scheduleList = schedules.map((schedule) => (
         <div key={schedule._id}>
+            <div>{schedule._id}</div>
             <div> {schedule.name}</div>
             <div> {schedule.date}</div>
             <button onClick={() => handleClick(schedule._id)}> Get Details </button>

@@ -6,7 +6,8 @@ const workoutReducer = (state = initialState.workouts, action) => {
       console.log(action.state)
       return action.state;
     case "ADD_WORKOUT_ACCEPTED_SUCCESS":
-    // check what is the returned .. ??
+      // check what is the returned .. ??
+      break;
     default:
       return state;
   }

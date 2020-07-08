@@ -8,32 +8,29 @@ import { useRouteMatch, Switch, Route, useHistory } from "react-router-dom";
 import ScheduleList from "./ScheduleList";
 import ScheduleDetails from "./ScheduleDetails";
 
-//TODO : First load of schedule details is empty .. need to figure out something
-
 const WorkoutSchedules = ({ schedules, getSchedules, getScheduleById, scheduleDetailsById }) => {
 
     const history = useHistory();
     useEffect(() => {
         getSchedules();
-    }, [])
+    });
 
+    const handleClick = (scheduleId) => {
+        getScheduleById(scheduleId);
+        history.push(`${url}/${scheduleId}`);
+    }
     let { url, path } = useRouteMatch();
-
     let switchElem = (
         <Switch>
             <Route exact path={path}>
                 {schedules.length > 0 &&
-                    <ScheduleList handleClick={(scheduleId) => {
-                        getScheduleById(scheduleId);
-                        history.push(`${url}/${scheduleId}`, { scheduleDetails: scheduleDetailsById })
-                    }} schedules={schedules} />}
+                    <ScheduleList handleClick={(scheduleId) => handleClick(scheduleId)} schedules={schedules} />}
             </Route>
             <Route path={`${path}/:scheduleId`}>
-                <ScheduleDetails />
+                {scheduleDetailsById !== undefined && scheduleDetailsById.workoutList !== undefined && <ScheduleDetails scheduleDetails={scheduleDetailsById} />}
             </Route>
         </Switch>
     )
-
     return (
         <div>
             {switchElem}
