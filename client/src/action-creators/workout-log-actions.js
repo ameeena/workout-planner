@@ -30,7 +30,7 @@ export function addWorkoutLog(workoutLogDetails) {
     return async (dispatch) => {
         try {
             const response = await workoutlogApis.addWorkoutLogApi(workoutLogDetails);
-            return dispatch(addWorkoutLogSuccess(response.data));
+            return dispatch(addWorkoutLogSuccess(workoutLogDetails));
         }
         catch (err) {
             console.log(err);

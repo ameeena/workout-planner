@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddWorkoutLog = ({ addWorkoutLog, handleClick, logRequirements }) => {
+const AddWorkoutLog = ({ handleClick, logRequirements }) => {
 
     const [reps, updateReps] = useState([])
 
