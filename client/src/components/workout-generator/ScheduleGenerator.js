@@ -3,10 +3,12 @@
 import React from "react";
 import * as workoutActionCreators from "../../action-creators/workout-actions";
 import * as scheduleActionCreators from "../../action-creators/schedule-actions";
+import styles from "./generator.module.css";
 
 import { connect } from "react-redux";
 
 import Workouts from "./Workouts";
+import { Typography, Button } from "@material-ui/core";
 
 class ScheduleGenerator extends React.Component {
 
@@ -41,20 +43,16 @@ class ScheduleGenerator extends React.Component {
     render() {
         return (
             <div>
-                <div>Generate Workout Schedule </div>
-                <div>
-                    <button onClick={() => this.getWorkoutList(this.levelEnum.easy)}>
-                        Easy
-                    </button>
-                    <button onClick={() => this.getWorkoutList(this.levelEnum.medium)}>
-                        Intermediate
-                    </button>
-                    <button onClick={() => this.getWorkoutList(this.levelEnum.difficult)}>
-                        Difficult
-                    </button>
+                <Typography align="center" variant="h3" component="h3">Workout Schedule Generator</Typography>
+                <div className="container" align="center">
+                    <Button style={{ margin: "20px" }} variant="contained" color="primary" onClick={() => this.getWorkoutList(this.levelEnum.easy)}>Easy</Button>
+
+                    <Button style={{ margin: "20px" }} variant="contained" color="primary" onClick={() => this.getWorkoutList(this.levelEnum.medium)}>Intermediate</Button>
+
+                    <Button style={{ margin: "20px" }} variant="contained" color="primary" onClick={() => this.getWorkoutList(this.levelEnum.difficult)}>Difficult</Button>
                 </div>
                 <Workouts workouts={this.props.workouts} />
-                {this.props.workouts.length > 0 && <button onClick={() => this.addWorkoutSchedule()}>Add Workout in Scheduler</button>}
+                {this.props.workouts.length > 0 && <div className="container" align="center"><Button style={{ margin: "20px" }} variant="contained" color="primary" onClick={() => this.addWorkoutSchedule()}>Add Workout in Scheduler</Button></div>}
             </div>
         )
     }

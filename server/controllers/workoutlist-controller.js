@@ -27,7 +27,7 @@ exports.getWorkoutsBasedOnLevel = async (req, res) => {
                             $match: { difficulty: levels[difficultyLevel], type: SHOULDER }
                         },
                         {
-                            $sample: { size: 2 }
+                            $sample: { size: 3 }
                         },
                     ],
                     q3: [

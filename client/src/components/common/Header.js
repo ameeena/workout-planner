@@ -1,18 +1,27 @@
 // This component will contain navigation bar
 import React from "react";
-import { Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
+import { AppBar, Toolbar, MenuItem } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+    root: {
+        backgroundColor: "#2b5799"
+    }
+});
 
 const Header = () => {
+    const classes = useStyles();
     return (
-        <div>
-            <ul>
-                <li>Dashboard</li>
-                <li><Link to="/">Home</Link></li>
-                <li> <Link to="/generateWorkout">Generator</Link></li>
-                <li><Link to="/schedule">Schedules</Link></li>
-                <li><Link to="/workoutlog">Work out Logs</Link></li>
-            </ul>
-        </div>)
+        <AppBar position="static" className={classes.root}>
+            <Toolbar>
+                <MenuItem component={NavLink} to="/" exact>Home</MenuItem>
+                <MenuItem component={NavLink} to="/generateWorkout">Generator</MenuItem>
+                <MenuItem component={NavLink} to="/schedule">Schedules</MenuItem>
+                <MenuItem component={NavLink} to="/workoutlog">Workout Logs</MenuItem>
+            </Toolbar>
+        </AppBar>
+    )
 }
 
 export default Header;

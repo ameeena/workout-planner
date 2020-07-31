@@ -27,7 +27,7 @@ const WorkoutLog = ({ addWorkoutLog, getWorkoutLogs, workoutLogs }) => {
     return (
         <div>
             <div>
-                {logRequirements !== undefined ? <AddWorkoutLog handleClick={handleAddWorkoutLogClick} logRequirements={logRequirements.LogReq} />
+                {(logRequirements !== undefined && logRequirements !== null) ? <AddWorkoutLog handleClick={handleAddWorkoutLogClick} logRequirements={logRequirements.LogReq} />
                     : workoutLogs !== undefined && <WorkoutLogDetails workoutLogs={workoutLogs} />}
             </div>
 

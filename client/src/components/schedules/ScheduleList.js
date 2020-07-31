@@ -1,23 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types"
+import { Grid, Card, CardContent, Typography, CardActions, Button, Box } from "@material-ui/core";
 
 const ScheduleList = ({ schedules, handleClick }) => {
 
     const scheduleList = schedules.map((schedule) => (
-        <div key={schedule._id}>
-            <div>{schedule._id}</div>
-            <div> {schedule.name}</div>
-            <div> {schedule.date}</div>
-            <button onClick={() => handleClick(schedule._id)}> Get Details </button>
-            <hr />
-        </div>
+        <Grid item xs={4} key={schedule._id}>
+            <Card>
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {schedule.name}
+                    </Typography>
+                    <Typography gutterBottom variant="body2">{schedule.name}</Typography>
+                    <Typography gutterBottom variant="body2">{schedule.date}</Typography>
+                </CardContent>
+                <CardActions>
+                    <Button variant="contained" color="primary" onClick={() => handleClick(schedule._id)}> Details </Button>
+                </CardActions>
+            </Card>
+        </Grid>
     ))
 
     return (
-        <div>
-            <h2>Schedule List</h2>
-            <div>{scheduleList}</div>
-        </div>
+        <Box>
+            <Typography align="center" variant="h3" component="h3">Schedules List</Typography>
+            <Grid container spacing={3}> {scheduleList}</Grid>
+        </Box>
     )
 }
 
