@@ -37,7 +37,7 @@ exports.getScheduleById = async (req, res) => {
 
 exports.getScheduleList = async (req, res) => {
     try {
-        let result = await workoutDb.collection(scheduleCollection).find({}).toArray();
+        let result = await workoutDb.collection(scheduleCollection).aggregate([{ $sort: { date: 1 } }]).toArray();
         return res.status(200).json(result);
     } catch (error) {
         return res.status(500).json(error);

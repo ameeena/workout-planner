@@ -33,7 +33,11 @@ class ScheduleGenerator extends React.Component {
             date: dateValues.toDateString()
         };
         this.props.addWorkoutSchedule(scheduleDetails);
+        // Go to schedule !!
+        // TODO : Say handle sucessful
+        this.props.history.push("/schedule");
     }
+
     render() {
         return (
             <div>

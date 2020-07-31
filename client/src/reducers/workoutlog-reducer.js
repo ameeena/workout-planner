@@ -7,7 +7,12 @@ const workoutLogReducer = (state = initialState.workoutLogs, action) => {
             let newArray = [];
             for (let repId in action.state.reps) {
                 let workout = state.find((workout) => workout._id == repId);
-                let newDataItem = [...workout.data, { date: action.state.date, reps: action.state.reps[repId] }];
+                let newDataItem = [];
+                if (workout !== undefined) {
+                    newDataItem = [...workout.data, { date: action.state.date, reps: action.state.reps[repId] }];
+                } else {
+                    newDataItem = [{ date: action.state.date, reps: action.state.reps[repId] }];
+                }
                 let newValue = Object.assign({}, { _id: repId, data: newDataItem, workoutName: workout.workoutName });
                 newArray.push(newValue);
             }

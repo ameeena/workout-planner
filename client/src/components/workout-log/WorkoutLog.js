@@ -13,7 +13,7 @@ const WorkoutLog = ({ addWorkoutLog, getWorkoutLogs, workoutLogs }) => {
 
     useEffect(() => {
         getWorkoutLogs();
-    }, []);
+    }, [logRequirements]);
 
     const handleAddWorkoutLogClick = (reps, date, scheduleId) => {
         let loggerDetails = {
