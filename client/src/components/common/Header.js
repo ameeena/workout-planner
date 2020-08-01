@@ -1,6 +1,6 @@
 // This component will contain navigation bar
 import React from "react";
-import { NavLink, Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { AppBar, Toolbar, MenuItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 

@@ -6,7 +6,7 @@ const workoutLogReducer = (state = initialState.workoutLogs, action) => {
         case "ADD_WORKOUT_LOG_API_SUCESS":
             let newArray = [];
             for (let repId in action.state.reps) {
-                let workout = state.find((workout) => workout._id == repId);
+                let workout = state.find((workout) => workout._id === repId);
                 let newDataItem = [];
                 if (workout !== undefined) {
                     newDataItem = [...workout.data, { date: action.state.date, reps: action.state.reps[repId] }];
@@ -17,7 +17,7 @@ const workoutLogReducer = (state = initialState.workoutLogs, action) => {
                 newArray.push(newValue);
             }
             // remove all the values from the state ==> get a new array and that inside this?
-            let newState = state.map((oldStateElem) => newArray.find((newRepElem) => newRepElem._id == oldStateElem._id) || oldStateElem);
+            let newState = state.map((oldStateElem) => newArray.find((newRepElem) => newRepElem._id === oldStateElem._id) || oldStateElem);
             return newState;
         case "WORKOUT_LOG_API_SUCESS":
             return action.state;

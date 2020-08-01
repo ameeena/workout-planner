@@ -2,7 +2,6 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Header from "./components/common/Header";
-import Footer from "./components/common/Footer";
 import WorkoutSchedules from "./components/schedules/WorkoutSchedules";
 import ScheduleGenerator from "./components/workout-generator/ScheduleGenerator";
 import WorkoutLog from "./components/workout-log/WorkoutLog";

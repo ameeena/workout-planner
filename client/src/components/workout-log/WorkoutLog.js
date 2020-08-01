@@ -1,19 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 import * as workoutLogActionCreators from "../../action-creators/workout-log-actions";
 import AddWorkoutLog from "./AddWorkoutLog";
 import WorkoutLogDetails from "./WorkoutLogDetails";
+import { Snackbar } from "@material-ui/core";
+import Alert from '@material-ui/lab/Alert';
+
 
 const WorkoutLog = ({ addWorkoutLog, getWorkoutLogs, workoutLogs }) => {
 
     const history = useHistory();
     let logRequirements = history.location.state;
 
+    const [open, setOpen] = useState(false);
+
     useEffect(() => {
         getWorkoutLogs();
-    }, [logRequirements]);
+    }, []);
 
     const handleAddWorkoutLogClick = (reps, date, scheduleId) => {
         let loggerDetails = {
@@ -21,12 +26,24 @@ const WorkoutLog = ({ addWorkoutLog, getWorkoutLogs, workoutLogs }) => {
             date: date,
             scheduleId: scheduleId
         }
-        addWorkoutLog(loggerDetails);
+        addWorkoutLog(loggerDetails).then(() => {
+            setOpen(true);
+            history.push("/workoutlog");
+        });
+    }
+
+    const handleClose = () => {
+        setOpen(false);
     }
 
     return (
         <div>
             <div>
+                <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+                    <Alert onClose={handleClose} severity="success">
+                        Log added successfully!!
+                    </Alert>
+                </Snackbar>
                 {(logRequirements !== undefined && logRequirements !== null) ? <AddWorkoutLog handleClick={handleAddWorkoutLogClick} logRequirements={logRequirements.LogReq} />
                     : workoutLogs !== undefined && <WorkoutLogDetails workoutLogs={workoutLogs} />}
             </div>

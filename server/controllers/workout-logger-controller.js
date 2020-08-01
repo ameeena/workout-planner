@@ -49,7 +49,7 @@ exports.getWorkoutLogsById = async (req, res) => {
 exports.getWorkoutLogs = async (req, res) => {
     try {
         // get A list of all workouts and group by workout Id and send
-        let result = await workoutDb.collection(workoutLoggerCollection).aggregate([{ $group: { _id: "$workoutId", data: { $push: { date: "$date", reps: "$reps" } } } }]).toArray();
+        let result = await workoutDb.collection(workoutLoggerCollection).aggregate([{ $group: { _id: "$workoutId", data: { $push: { date: "$date", reps: "$reps", repId: "$_id" } } } }]).toArray();
         let workoutIds = result.map((elem) => ObjectID(elem._id));
         let workoutNames = await workoutDb.collection(workoutCollection).find({ _id: { $in: workoutIds } }).toArray();
         for (const eachWorkout of result) {

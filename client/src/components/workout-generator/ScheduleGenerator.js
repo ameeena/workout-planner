@@ -3,12 +3,12 @@
 import React from "react";
 import * as workoutActionCreators from "../../action-creators/workout-actions";
 import * as scheduleActionCreators from "../../action-creators/schedule-actions";
-import styles from "./generator.module.css";
-
 import { connect } from "react-redux";
 
 import Workouts from "./Workouts";
-import { Typography, Button } from "@material-ui/core";
+import { Typography, Button, TextField, Snackbar } from "@material-ui/core";
+import Alert from '@material-ui/lab/Alert';
+
 
 class ScheduleGenerator extends React.Component {
 
@@ -22,27 +22,50 @@ class ScheduleGenerator extends React.Component {
         };
         this.getWorkoutList = this.getWorkoutList.bind(this);
         this.addWorkoutSchedule = this.addWorkoutSchedule.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+        this.state = {
+            name: "",
+            saving: false,
+            open: false
+        };
     }
     getWorkoutList(level) {
         this.props.getWorkoutList(level);
     }
+    handleChange(event) {
+        this.setState({
+            name: event.target.value
+        });
+    }
+    handleClose() {
+        this.setState({ open: false })
+    }
     addWorkoutSchedule() {
-        //get Object keys for all the workouts 
+        //get Object keys for all the workouts
+        this.setState({
+            saving: true
+        });
         let dateValues = new Date();
         let scheduleDetails = {
-            name: `schedule_${dateValues.toDateString()}`,
+            name: this.state.name !== "" ? this.state.name : `schedule_${dateValues.toDateString()}`,
             workoutList: this.props.workouts.map(elem => elem._id),
             date: dateValues.toDateString()
         };
-        this.props.addWorkoutSchedule(scheduleDetails);
-        // Go to schedule !!
-        // TODO : Say handle sucessful
-        this.props.history.push("/schedule");
+        this.props.addWorkoutSchedule(scheduleDetails).then(() => {
+            this.setState({ open: true });
+            this.props.history.push("/schedule");
+        });
     }
 
     render() {
         return (
             <div>
+                <Snackbar open={this.state.open} onClose={this.handleClose} autoHideDuration={3000} >
+                    <Alert onClose={this.handleClose} severity="success">
+                        This is a success message!
+                    </Alert>
+                </Snackbar>
                 <Typography align="center" variant="h3" component="h3">Workout Schedule Generator</Typography>
                 <div className="container" align="center">
                     <Button style={{ margin: "20px" }} variant="contained" color="primary" onClick={() => this.getWorkoutList(this.levelEnum.easy)}>Easy</Button>
@@ -52,7 +75,11 @@ class ScheduleGenerator extends React.Component {
                     <Button style={{ margin: "20px" }} variant="contained" color="primary" onClick={() => this.getWorkoutList(this.levelEnum.difficult)}>Difficult</Button>
                 </div>
                 <Workouts workouts={this.props.workouts} />
-                {this.props.workouts.length > 0 && <div className="container" align="center"><Button style={{ margin: "20px" }} variant="contained" color="primary" onClick={() => this.addWorkoutSchedule()}>Add Workout in Scheduler</Button></div>}
+                {this.props.workouts.length > 0 &&
+                    <div className="container" align="center">
+                        <TextField name="" onChange={this.handleChange} type="text" label="Schedule Name"></TextField>
+                        <Button style={{ margin: "20px" }} variant="contained" color="primary" onClick={() => this.addWorkoutSchedule()}>Add Workout in Scheduler</Button>
+                    </div>}
             </div>
         )
     }

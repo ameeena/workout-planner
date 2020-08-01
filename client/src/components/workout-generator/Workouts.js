@@ -3,7 +3,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { Card, CardHeader, CardContent, Typography, Grid } from "@material-ui/core";
+import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 
 const Workouts = ({ workouts }) => {
     const workoutElem = workouts.map((eachWorkout) => (
